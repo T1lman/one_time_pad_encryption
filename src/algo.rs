@@ -1,4 +1,4 @@
-pub fn encrypt(msg: Vec<u8>, key: Vec<u8>) -> Vec<u8> {
+pub fn encrypt(msg: &Vec<u8>, key: &Vec<u8>) -> Vec<u8> {
     let len = msg.len();
     assert_eq!(len, key.len());
     let mut returnvec: Vec<u8> = Vec::new();
@@ -9,7 +9,7 @@ pub fn encrypt(msg: Vec<u8>, key: Vec<u8>) -> Vec<u8> {
     returnvec
 }
 
-pub fn decrypt(msg: Vec<u8>, key: Vec<u8>) -> Vec<u8> {
+pub fn decrypt(msg: &Vec<u8>, key: &Vec<u8>) -> Vec<u8> {
     let mut returnvec: Vec<u8> = Vec::new();
     for i in 0..msg.len() {
         if msg[i] < key[i] {
