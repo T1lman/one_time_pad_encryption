@@ -6,4 +6,5 @@ fn main() {
     let encrypted_msg = algo::encrypt(msg.clone(), key.clone());
     let decrypt_test = algo::decrypt(encrypted_msg, key);
     println!("{}", String::from_utf8_lossy(&decrypt_test));
+    println!("It works!");
 }
